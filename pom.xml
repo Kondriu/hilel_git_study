@@ -25,7 +25,7 @@
         <assertj-core.version>3.8.0</assertj-core.version>
         <commons-lang3.version>3.6</commons-lang3.version>
         <lombok-project.version>1.16.18</lombok-project.version>
-        <rest-assured.version>3.3.0</rest-assured.version>
+        <rest-assured.version>3.0.0</rest-assured.version>
     </properties>
 
     <dependencies>
