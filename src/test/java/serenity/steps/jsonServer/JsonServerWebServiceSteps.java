@@ -16,10 +16,10 @@ public class JsonServerWebServiceSteps extends AbstractWsConfiguration {
     private static final String PROFILE_API_PATH = "/profile";
 
     @Step
-    public void createNewPost(){
-        final PostDTO postDTO = new PostDTO();
-        postDTO.setAuthor("author hhhh");
-        postDTO.setTitle("title ssss");
+    public void createNewPost(final PostDTO postDTO){
+        //final PostDTO postDTO = new PostDTO();
+        //postDTO.setAuthor("author hhhh");
+        //postDTO.setTitle("title ssss");
         final String postDtoJson = JsonUtils.toJson(postDTO);
         given().baseUri(JSON_LOCALHOST_SERVER_URL)
                 .contentType(ContentType.JSON)
@@ -36,10 +36,10 @@ public class JsonServerWebServiceSteps extends AbstractWsConfiguration {
                 .get(createPostApiPath).as(PostDTO.class);
     }
 
-    public static void main(String[] args) {
-        final JsonServerWebServiceSteps steps = new JsonServerWebServiceSteps();
-        steps.createNewPost();
-        final PostDTO createdResource = steps.getCreatedResource();
-
-    }
+//    public static void main(String[] args) {
+//        final JsonServerWebServiceSteps steps = new JsonServerWebServiceSteps();
+//        steps.createNewPost();
+//        final PostDTO createdResource = steps.getCreatedResource();
+//
+//    }
 }
